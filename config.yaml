@@ -1,0 +1,10 @@
+providers:
+  primary: "A"
+  backup: "B"
+retry:
+  max_attempts_per_provider: 3
+  base_delay_seconds: 1
+  backoff_multiplier: 2
+failover:
+  enabled: true
+
