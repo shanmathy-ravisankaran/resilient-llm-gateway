@@ -1,6 +1,6 @@
 # Resilient LLM gateway
 
-A middleware layer that sits between an application and LLM providers, absorbing rate limits, timeouts, and outages so the application never sees them. Retries with exponential backoff, automatically fails over to a backup provider, and uses a circuit breaker to stop wasting time on a provider that's clearly down — all driven by a single YAML config file.
+A middleware layer that sits between an application and LLM providers, absorbing rate limits, timeouts, and outages so the application never sees them. Retries with exponential backoff, automatically fails over to a backup provider, and uses a circuit breaker to stop wasting time on a provider that's clearly down all driven by a single YAML config file.
 
 ## Why this is different from a basic retry wrapper
 
