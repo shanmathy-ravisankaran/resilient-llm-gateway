@@ -106,9 +106,6 @@ cp .env.example .env    # add your OPENAI_API_KEY
 python main.py          # send a single request through the gateway
 python stress_test.py   # run the full scenario suite and print results
 ```
+## Summary
 
-## What I'd build next
-
-- A real second provider (Anthropic) instead of simulating two providers through one
-- Persisting circuit breaker state across process restarts (currently in-memory only)
-- A small dashboard tracking cost and failover rate over time, similar in spirit to the eval suite from my [self-healing RAG project](https://github.com/shanmathy-ravisankaran/self-healing-rag)
+This started as a basic retry wrapper and grew into something closer to what production LLM infrastructure actually needs: automatic failover, a circuit breaker that avoids wasting time on a provider that's clearly down, real cost tracking, and behavior that's genuinely driven by config rather than hardcoded. Every number above came from running the actual code, not estimating it.
