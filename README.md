@@ -35,7 +35,7 @@ Note: both "Provider A" and "Provider B" route through OpenAI in this version (u
 
 ## Fault injection, not hope
 
-Real rate limits and outages don't happen on a reliable schedule, so this project includes a fault injector that deliberately simulates provider failures on command. This is a standard practice in resilience engineering — sometimes called chaos testing — used specifically because waiting for a real outage to validate recovery logic isn't a repeatable test strategy.
+Real rate limits and outages don't happen on a reliable schedule, so this project includes a fault injector that deliberately simulates provider failures on command. This is a standard practice in resilience engineering sometimes called chaos testing used specifically because waiting for a real outage to validate recovery logic isn't a repeatable test strategy.
 
 ## Measured results
 
