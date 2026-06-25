@@ -63,6 +63,10 @@ The real test of a circuit breaker is what happens on the *second* failure, not 
 
 **Result: a 68.5% reduction in average latency** on calls 2-4 versus call 1, by recognizing a provider was already known to be down and skipping the wasted retry cycle entirely.
 
+![Circuit breaker speedup comparison](circuit_breaker_speedup.png)
+
+![Architecture sequence diagram showing the failover flow](architecture_sequence.png)
+
 ## Config genuinely drives behavior — proven, not assumed
 
 To confirm `config.yaml` actually controls behavior rather than being read and ignored, the same fault scenario was run twice with only the config changed:
